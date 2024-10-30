@@ -15,6 +15,14 @@ header{
     padding: 0 60px 0 60px;
 }
 
+footer{
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-basis: 100%;
+    padding: 35px 60px 35px 60px;
+}
+
 ul{
     display:flex;
     list-style: none;
@@ -38,3 +46,6 @@ button{
     border-color: lightgreen;
 }
 
+section{
+    padding: 30px 60px 30px 60px;
+}
