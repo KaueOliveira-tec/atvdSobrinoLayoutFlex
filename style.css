@@ -19,8 +19,10 @@ footer{
     background-color: black;
     color: white;
     display: flex;
+    justify-content: center;
     flex-basis: 100%;
     padding: 35px 60px 35px 60px;
+   
 }
 
 ul{
@@ -34,18 +36,29 @@ main, aside{
     background-color: lightblue;
     padding: 30px 60px 30px 60px;
 }
-
-.img1{
-    display: flex;
-    align-items: center;
-}
+    .img1{
+        display: flex;
+        align-items: center;
+    }
 
 button{
     background-color: lightgreen;
     padding: 15px 15px 15px 15px;
-    border-color: lightgreen;
+    border: none;
+    color: white;
 }
 
 section{
+    display: flex;
+    flex-wrap: wrap;
     padding: 30px 60px 30px 60px;
 }
+    .boxcentralizada{
+        display: flex;
+        justify-content: center;
+        gap: 2vw;
+    }
+    .box{
+        text-align: center;
+        flex: 1;
+    }
