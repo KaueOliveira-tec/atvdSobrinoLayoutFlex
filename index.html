@@ -3,78 +3,201 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Atividade Layout Flex</title>
+
+    <style>
+        body{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin: 0;
+            padding: 0; 
+        }
+
+        header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: black;
+            color: white;
+            padding: 15px 40px 15px 40px;
+        }
+            ul{
+                display: flex;
+                list-style: none;
+                gap: 15px;
+            }
+                a{
+                    text-decoration: none;
+                    color: white;
+                }
+
+        main{
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+            background-color: gray;
+        }
+            .msection{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto;
+                gap: 20px;
+                padding: 20px;
+            }
+            .mtexto{
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: left;
+                padding: 20px;
+                color: white;
+            }
+            
+        figure{
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            background-color: gray;
+        }
+            figure img{
+                max-width: 100%;
+                height: auto;
+            }
+
+        button{
+            background-color: darkorange;
+            padding: 15px 40px;
+            border: none;
+            margin-top: 15px;
+            border-radius: 5px;
+            color: white;
+        }
+            button:hover{
+                background-color: orange;
+            }
+
+        .secasides{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .asidesh2{
+            text-align: left;
+            padding-left: 15px;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .container{
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+        }
+
+        .box{
+            flex: 1;
+            margin: 10px;
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .box img{
+            max-width: 100%;
+            height: auto;
+        }
+
+        footer{
+            background-color: black;
+            padding: 10px 15px 10px 15px;
+            color: white;
+            text-align: center;
+        }
+
+    </style>
+
 </head>
 <body>
     <header> 
         <h1> Lorem Club </h1>
-        <nav>
-            <ul> 
-                <li> Serviços </li>
-                <li> Notícias </li>
-                <li> Sobre nós </li>
-            </ul>
-        </nav>
+
+        <ul> 
+            <li> <a href="#"> Serviços </a> </li>
+            <li> <a href="#"> Notícias </a> </li>
+            <li> <a href="#"> Sobre nós </a> </li>
+        </ul>
+
     </header>
 
 
     <main>  
-        <h2> Notícia 1 </h2>
+        <section class="msection">
+            <div class="mtexto"> 
+                <h2> Notícia 1 </h2>
 
-        <p>    
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>  
-        
-        <button> Acesse aqui </button>
-        
+                <p>    
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>  
+                    
+                <button> Acesse aqui </button> 
+            </div>
+            <figure>
+                <img src="https://placehold.co/600x250" alt="imagem principal placeholder">
+            </figure>
+        </section>
     </main>
 
-    <aside> 
-        <img src="https://placehold.co/600x250" alt="imagem placeholder" class="img1">
-    </aside>
+    <section class="secasides">
+        <h2 class="asidesh2"> Mais notícias </h2>
 
-    <section>
-    <h2> Mais notícias </h2>
+        <div class="container">
+            <aside class="box">
+                <img src="https://placehold.co/450x250" alt="imagem aside placeholder 1">
 
-    <div class="boxcentralizada">
-        <div class="box">
-            <img src="https://placehold.co/450x250" alt="imagem placeholder">
+                <h3> Notícia 1 </h3>
+            
+                <p> 
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <button> Acesse aqui </button>
+            </aside>
+    
+            <aside class="box">
+                <img src="https://placehold.co/450x250" alt="imagem aside placeholder 2">
 
-            <h3> Notícia 1 </h3>
-        
-            <p> 
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <button> Acesse aqui </button>
+                <h3> Notícia 2 </h3>
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <button> Acesse aqui </button>
+            </aside>
+
+            <aside class="box">
+                <img src="https://placehold.co/450x250" alt="imagem aside placeholder 3">
+
+                <h3> Notícia 3 </h3>
+
+                <p> 
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <button> Acesse aqui </button>
+            </aside>
         </div>
-   
-        <div class="box">
-            <img src="https://placehold.co/450x250" alt="imagem placeholder">
-
-            <h3> Notícia 2 </h3>
-
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <button> Acesse aqui </button>
-        </div>
-
-        <div class="box">
-            <img src="https://placehold.co/450x250" alt="imagem placeholder">
-
-            <h3> Notícia 3 </h3>
-
-            <p> 
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <button> Acesse aqui </button>
-        </div>
-    </div>
     </section>
 
     <footer>  
-        Feito por Kauê de Oliveira Martins e Marcos F. Marinho | Todos os direitos reservados | Exerecício proposto para a disciplina PPSI-II | 30 de Outubro de 2024
+        <p>
+            Feito por Kauê de Oliveira Martins e Marcos F. Marinho | Todos os direitos reservados | Exerecício proposto para a disciplina PPSI-II | 01 de Novembro de 2024
+        </p>
     </footer>
 </body>
 </html>
